@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Country List</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!countrylistdata"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="countrylistdata">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Region</th>
+            <th>SubRegion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let country of countrylistdata">
+            <td>{{ country.name }}</td>
+            <td>{{ country.region }}</td>
+            <td>{{ country.subregion }}</td>
+        </tr>
+    </tbody>
+</table>
